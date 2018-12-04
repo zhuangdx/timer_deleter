@@ -6,9 +6,10 @@ timer_deleter   # 文件夹名
 ├── conf        # 配置目录  
     ├──	config.json     # 配置文件-清理指定哪些文件夹下多少天前的什么格式的文件   
     └── log.conf        # 配置文件-logging日志模块配置
-├── handle.py   # 执行脚本  
-├── readme.md   # 说明文档  
-└── run.log     # 运行时日志log  
+├── readme.md           # 说明文档  
+├── add_cron_td_job.sh  # 添加cron定时任务脚本  
+├── handle.py           # 执行脚本  
+└── run.log             # 运行时日志log  
 ```
 
 # 注意配置
