@@ -1,48 +1,48 @@
-# ±¾¹¤¾ßÓÃÓÚÇåÀíÖ¸¶¨ÎÄ¼þ¼ÐÏÂ³¬¹ýÊ±¼äµÄÌØ¶¨ÀàÐÍÎÄ¼þ  
+# æœ¬å·¥å…·ç”¨äºŽæ¸…ç†æŒ‡å®šæ–‡ä»¶å¤¹ä¸‹è¶…è¿‡æ—¶é—´çš„ç‰¹å®šç±»åž‹æ–‡ä»¶  
 
-ÎÄ¼þÄ¿Â¼
+æ–‡ä»¶ç›®å½•
 ```
-timer_deleter   # ÎÄ¼þ¼ÐÃû   
-©À©¤©¤ conf        # ÅäÖÃÄ¿Â¼  
-    ©À©¤©¤	config.json     # ÅäÖÃÎÄ¼þ-ÇåÀíÖ¸¶¨ÄÄÐ©ÎÄ¼þ¼ÐÏÂ¶àÉÙÌìÇ°µÄÊ²Ã´¸ñÊ½µÄÎÄ¼þ   
-    ©¸©¤©¤ log.conf        # ÅäÖÃÎÄ¼þ-loggingÈÕÖ¾Ä£¿éÅäÖÃ
-©À©¤©¤ readme.md           # ËµÃ÷ÎÄµµ  
-©À©¤©¤ add_cron_td_job.sh  # Ìí¼Ócron¶¨Ê±ÈÎÎñ½Å±¾  
-©À©¤©¤ handle.py           # Ö´ÐÐ½Å±¾  
-©¸©¤©¤ run.log             # ÔËÐÐÊ±ÈÕÖ¾log  
+timer_deleter   # æ–‡ä»¶å¤¹å   
+â”œâ”€â”€ conf        # é…ç½®ç›®å½•  
+    â”œâ”€â”€	config.json     # é…ç½®æ–‡ä»¶-æ¸…ç†æŒ‡å®šå“ªäº›æ–‡ä»¶å¤¹ä¸‹å¤šå°‘å¤©å‰çš„ä»€ä¹ˆæ ¼å¼çš„æ–‡ä»¶   
+    â””â”€â”€ log.conf        # é…ç½®æ–‡ä»¶-loggingæ—¥å¿—æ¨¡å—é…ç½®
+â”œâ”€â”€ readme.md           # è¯´æ˜Žæ–‡æ¡£  
+â”œâ”€â”€ add_cron_td_job.sh  # æ·»åŠ cronå®šæ—¶ä»»åŠ¡è„šæœ¬  
+â”œâ”€â”€ handle.py           # æ‰§è¡Œè„šæœ¬  
+â””â”€â”€ run.log             # è¿è¡Œæ—¶æ—¥å¿—log  
 ```
 
-# ×¢ÒâÅäÖÃ
-1. ËùÐè»·¾³£º    
-    * LinuxÏµÍ³   
-    * cron»·¾³          £¨ÔËÐÐ crontab -l ²é¿´ÊÇ·ñÖ§³Ö£©  
-    * python3 ÒÔÉÏ      £¨ÔËÐÐ python3 -V ²é¿´°æ±¾ÊÇ·ñÖ§³Ö£©    
+# æ³¨æ„é…ç½®
+1. æ‰€éœ€çŽ¯å¢ƒï¼š    
+    * Linuxç³»ç»Ÿ   
+    * cronçŽ¯å¢ƒ          ï¼ˆè¿è¡Œ crontab -l æŸ¥çœ‹æ˜¯å¦æ”¯æŒï¼‰  
+    * python3 ä»¥ä¸Š      ï¼ˆè¿è¡Œ python3 -V æŸ¥çœ‹ç‰ˆæœ¬æ˜¯å¦æ”¯æŒï¼‰    
 
-2. Òò²»Í¬µÄÎÄ¼þµÄÈ¨ÏÞ²»Í¬£¬¶¨Ê±ÇåÀí½Å±¾½«ÒÔrootÈ¨ÏÞÔËÐÐ
+2. å› ä¸åŒçš„æ–‡ä»¶çš„æƒé™ä¸åŒï¼Œå®šæ—¶æ¸…ç†è„šæœ¬å°†ä»¥rootæƒé™è¿è¡Œ
 
-3. config.jsonÖÐ¹æÔòµÄ¸ñÊ½ÈçÏÂ£¬¶à¸ö¹æÔòÓÃ`,`¸ô¿ª    
+3. config.jsonä¸­è§„åˆ™çš„æ ¼å¼å¦‚ä¸‹ï¼Œå¤šä¸ªè§„åˆ™ç”¨`,`éš”å¼€    
     ```
     {   
-        "Â·¾¶": "",   
-        "ÎÄ¼þÀàÐÍ": "*.log",    
-        "¹ýÆÚÊ±¼ä": "7"     
+        "è·¯å¾„": "",   
+        "æ–‡ä»¶ç±»åž‹": "*.log",    
+        "è¿‡æœŸæ—¶é—´": "7"     
     }     
     ```
-    "Â·¾¶"¼´ÊÇÐèÒªÇåÀíµÄÎÄ¼þËùÔÚÄ¿Â¼£»  
-    "ÎÄ¼þÀàÐÍ"ÐèÒªÇåÀíµÄÎÄ¼þÀàÐÍ£»  Èç *.log | * | *.png  
-    "¹ýÆÚÊ±¼ä"µ¥Î»ÎªÌì£¬¼´¶àÉÙÌìÇ°µÄÎÄ¼þ ;
+    "è·¯å¾„"å³æ˜¯éœ€è¦æ¸…ç†çš„æ–‡ä»¶æ‰€åœ¨ç›®å½•ï¼›  
+    "æ–‡ä»¶ç±»åž‹"éœ€è¦æ¸…ç†çš„æ–‡ä»¶ç±»åž‹ï¼›  å¦‚ *.log | * | *.png  
+    "è¿‡æœŸæ—¶é—´"å•ä½ä¸ºå¤©ï¼Œå³å¤šå°‘å¤©å‰çš„æ–‡ä»¶ ;
     
 	
-# Ê¹ÓÃËµÃ÷	
-1. ÅäÖÃconfig.jsonÎÄ¼þ, Ìí¼Ó¹æÔò
+# ä½¿ç”¨è¯´æ˜Ž	
+1. é…ç½®config.jsonæ–‡ä»¶, æ·»åŠ è§„åˆ™
 
-2. ¸ù¾ÝÐèÒªÔËÐÐ²»Í¬ÃüÁî  
-    * µÚÒ»ÖÖÊÇÖ±½ÓÔËÐÐ£¬ÇåÀíÒ»´Î    
+2. æ ¹æ®éœ€è¦è¿è¡Œä¸åŒå‘½ä»¤  
+    * ç¬¬ä¸€ç§æ˜¯ç›´æŽ¥è¿è¡Œï¼Œæ¸…ç†ä¸€æ¬¡    
     ```shell
     sudo python3 handle.py
     ```
     
-    * µÚ¶þÖÖ£¬Ìí¼Ócron¶¨Ê±ÈÎÎñ£¬¶¨Ê±ÇåÀí¡£µ±Ç°Ã¿Ìì5µãÔËÐÐ£¬ÈçÐèÐÞ¸Ä²Î¼ûcronbÎÄµµ£¬add_cron_td_job.shµÚ6ÐÐ
+    * ç¬¬äºŒç§ï¼Œæ·»åŠ cronå®šæ—¶ä»»åŠ¡ï¼Œå®šæ—¶æ¸…ç†ã€‚å½“å‰æ¯å¤©5ç‚¹è¿è¡Œï¼Œå¦‚éœ€ä¿®æ”¹å‚è§cronbæ–‡æ¡£ï¼Œadd_cron_td_job.shç¬¬6è¡Œ
     ```shell
     sudo sh add_cron_td_job.sh
     ```
